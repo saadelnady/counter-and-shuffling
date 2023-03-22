@@ -1,0 +1,141 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* start counter */
+
+.counter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+}
+
+.counter button {
+  background-color: #ddd;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  width: 30px;
+  font-size: 30px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+.counter span {
+  margin: 0 20px;
+  background-color: #eee;
+  padding: 10px;
+  width: 40px;
+  text-align: center;
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+  font-weight: bold;
+}
+
+/* end counter */
+
+/*start shuffling */
+
+.services .services-buttons {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.services .services-buttons button {
+  padding: 6px 8px;
+  margin-bottom: 10px;
+  background-color: rgba(255, 0, 0, 0.545);
+  color: white;
+  border: none;
+  outline: none;
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+  cursor: pointer;
+}
+
+.services .services-buttons button.active {
+  background-color: rgba(255, 0, 0, 0.786);
+}
+
+.services .services-contents {
+  position: relative;
+  width: 50%;
+  margin: 0 auto;
+}
+
+@media (max-width: 1200px) {
+  .services .services-contents {
+    width: 80%;
+  }
+}
+
+.services .services-contents .content {
+  padding: 15px;
+  position: absolute;
+  background-color: #eee;
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  opacity: 0;
+}
+
+@media (max-width: 768px) {
+  .services .services-contents .content {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+.services .services-contents .content.active {
+  opacity: 1;
+}
+
+.services .services-contents .content img {
+  max-width: 400px;
+  margin-right: 30px;
+}
+
+@media (max-width: 768px) {
+  .services .services-contents .content img {
+    margin-right: 0px;
+    max-width: 80%;
+  }
+}
+
+.services .services-contents .content .content-text {
+  line-height: 1.3;
+}
+
+.services .services-contents .content .content-text h3 {
+  margin: 15px 0;
+}
+
+.services .services-contents .content .content-text p {
+  font-size: 12px;
+  width: 80%;
+}
+
+@media (max-width: 768px) {
+  .services .services-contents .content .content-text p {
+    width: 100%;
+  }
+}
+
+/*end shuffling */ ;

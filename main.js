@@ -28,33 +28,52 @@ btnMinus.onclick = () => {
 };
 
 // services
+// let serviceButtons = document.querySelectorAll(".services-buttons button");
+// let servicesContents = document.querySelectorAll(
+//   ".services .services-contents .content"
+// );
+
+// for (let i = 0; i < serviceButtons.length; i++) {
+//   serviceButtons[i].onclick = function () {
+//     removeActivefromAllbuttons();
+//     this.classList.add("active");
+//     changeContent();
+//     servicesContents[i].classList.add("active");
+//   };
+// }
+
+// function removeActivefromAllbuttons() {
+//   serviceButtons.forEach((button) => {
+//     button.classList.remove("active");
+//   });
+// }
+
+// function changeContent() {
+//   servicesContents.forEach((content) => {
+//     content.classList.remove("active");
+//   });
+// }
+
+// new method forEach
 let serviceButtons = document.querySelectorAll(".services-buttons button");
 let servicesContents = document.querySelectorAll(
   ".services .services-contents .content"
 );
-for (let i = 0; i < serviceButtons.length; i++) {
-  serviceButtons[i].onclick = function () {
-    removeAllactive();
-    this.classList.add("active");
-    changeContent();
-    // if (
-    //   servicesContents[i].getAttribute("data-src") ==
-    //   this.getAttribute("data-src")
-    // ) {
-    //   servicesContents[i].classList.add("active");
-    // }
-    servicesContents[i].classList.add("active");
-  };
-}
+let buttonsDiv = document.querySelector(".services .services-buttons");
+buttonsDiv.addEventListener("click", (e) => {
+  let currentBtn = e.target;
+  // link current btn with current div using id && data-src
+  let currentDiv = document.getElementById(currentBtn.dataset.src);
 
-function removeAllactive() {
-  serviceButtons.forEach((button) => {
-    button.classList.remove("active");
+  // remove active class from all buttons and add active class to current button
+  serviceButtons.forEach((btn) => {
+    btn.classList.remove("active");
+    currentBtn.classList.add("active");
   });
-}
 
-function changeContent() {
+  // remove active class from all contents and add active class to current div
   servicesContents.forEach((content) => {
     content.classList.remove("active");
+    currentDiv.classList.add("active");
   });
-}
+});

@@ -39,6 +39,7 @@
   -ms-border-radius: 6px;
   -o-border-radius: 6px;
   font-weight: bold;
+  font-size: 21px;
 }
 
 /* end counter */
@@ -94,6 +95,11 @@
   justify-content: space-between;
   align-items: center;
   opacity: 0;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
 }
 
 @media (max-width: 768px) {
